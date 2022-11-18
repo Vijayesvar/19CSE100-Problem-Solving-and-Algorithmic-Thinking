@@ -4,10 +4,10 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="cb.en.u4cys22074"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-11-18 10:55:22 AM"/>
+        <attribute name="saved" value="2022-11-18 11:05:34 AM"/>
         <attribute name="created" value="Y2IuZW4udTRjeXMyMjA3NDsyMDIyMjNNQVlDMDA1OTsyMDIyLTExLTE4OzA5OjAxOjEzIEFNOzMzMjI="/>
         <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA3NDsyMDIyMjNNQVlDMDA1OTsyMDIyLTExLTE4OzEwOjM0OjQ4IEFNOzI7Y2IuZW4udTRjeXMyMjA3NDsyMDIyMjNNQVlDMDA1OTsyMDIyLTExLTE4OzA5OjAxOjEzIEFNO2F0bS5mcHJnOzc2NzY="/>
-        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA3NDsyMDIyMjNNQVlDMDA1OTsyMDIyLTExLTE4OzEwOjU1OjIyIEFNOzEyOzM0ODE="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA3NDsyMDIyMjNNQVlDMDA1OTsyMDIyLTExLTE4OzExOjA1OjM0IEFNOzEzOzM0ODE="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -88,7 +88,7 @@
                                 <else>
                                     <if expression="usernumber=4">
                                         <then>
-                                            <output expression="&quot;your balance is&quot;&amp;balance" newline="True"/>
+                                            <output expression="&quot;your balance is&quot;&amp;currentbalance" newline="True"/>
                                         </then>
                                         <else/>
                                     </if>
