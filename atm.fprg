@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22074"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:11:45 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA3NDsyMDIyMjNNQVlDMDA1OTsyMDIyLTExLTE4OzA5OjAxOjEzIEFNOzMzMjI="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA3NDsyMDIyMjNNQVlDMDA1OTsyMDIyLTExLTE4OzEwOjExOjQ1IEFNOzk7MzQzNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;welcome,please insert your card&quot;" newline="True"/>
+            <comment text="working of an atm machine"/>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;enter your name&quot;" newline="True"/>
+            <input variable="name"/>
+            <declare name="accno" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter your accno&quot;" newline="True"/>
+            <input variable="accno"/>
+            <declare name="currentbalance" type="Real" array="False" size=""/>
+            <output expression="&quot;enter your current balance&quot;" newline="True"/>
+            <input variable="currentbalance"/>
+            <declare name="pin1" type="Integer" array="False" size=""/>
+            <comment text="your pin is entered for security purposes"/>
+            <output expression="&quot;enter yuor pin&quot;" newline="True"/>
+            <input variable="pin1"/>
+            <declare name="withdrawelamount" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the amount to withdraw&quot;" newline="True"/>
+            <input variable="withdrawelamount"/>
+            <if expression="currentbalance&gt;withdrawelamount">
+                <then>
+                    <comment text="your pin will be rechecked"/>
+                    <declare name="pin2" type="Integer" array="False" size=""/>
+                    <output expression="&quot;enter your pin&quot;" newline="True"/>
+                    <input variable="pin2"/>
+                    <if expression="pin1=pin2">
+                        <then>
+                            <declare name="balance" type="Integer" array="False" size=""/>
+                            <if expression="balance&lt;500">
+                                <then>
+                                    <comment text="if your balance is less than 500 you not be able to withdraw"/>
+                                    <output expression="&quot;your balance is&quot;&amp; currentbalance-withdrawelamount" newline="True"/>
+                                    <output expression="&quot;currently your balance is less than 500 so that you cannot withdraw the money&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="balance" expression="currentbalance-withdrawelamount"/>
+                                    <comment text="your balance after withdrawel"/>
+                                    <output expression="&quot;your balance is&quot;&amp;balance" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;sorry your pin is incorrect&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <comment text="you will not be able to withdraw the mpney if the current balance is less than 500"/>
+                    <output expression="&quot;sorry your current balance is less than withdrawelamount&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
