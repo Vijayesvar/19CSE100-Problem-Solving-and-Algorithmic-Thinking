@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22074"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:41:53 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA3NDsyMDIyMjNNQVlDMDA3MjsyMDIzLTAxLTIwOzA5OjE3OjA0IEFNOzMzMTc="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA3NDsyMDIyMjNNQVlDMDA3MjsyMDIzLTAxLTIwOzEwOjQxOjUzIEFNOzg7MzQyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, j, t, i, s" type="Integer" array="False" size=""/>
+            <output expression="&quot;eneter the total number of values&quot;" newline="True"/>
+            <comment text="you have to enter the number of values "/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <comment text="array is used to store the given values"/>
+            <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                <comment text="for loop is used for getting the values "/>
+                <output expression="&quot;enter the number&quot;&amp;j+1" newline="True"/>
+                <input variable="a[j]"/>
+            </for>
+            <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                <comment text="initialising t=j"/>
+                <assign variable="t" expression="j"/>
+                <comment text="here the for loop is used for sorting the values"/>
+                <for variable="i" start="j+1" end="n-1" direction="inc" step="1">
+                    <comment text="if statement is used to sort the values according to the condition we use"/>
+                    <if expression="a[t]&lt;a[i]">
+                        <then>
+                            <assign variable="t" expression="i"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <comment text="s is initialised"/>
+                <assign variable="s" expression="a[t]"/>
+                <assign variable="a[t]" expression="a[j]"/>
+                <assign variable="a[j]" expression="s"/>
+                <comment text="now it displays the sorted values"/>
+                <output expression="s" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
